@@ -38,6 +38,7 @@ if (isset($_POST['username']) && isset($_POST['password'])){
         <input type="password" name="password" class="form-control" placeholder="Password" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
     </form>
+    123
 </div>
 </body>
 </html>
