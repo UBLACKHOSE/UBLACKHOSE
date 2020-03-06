@@ -9,3 +9,22 @@ p.float-md-right{
     background: #635e74;
 
 }
+#films .col-sm-3 img{
+    width: inherit;
+}
+.container .row .col-sm-3{
+    border-right: 1px solid black;
+}
+#films_conteiner{
+    background: #ebe8ec;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#films .row{
+    background: white;
+}
+@media (max-width: 720px) {
+    .container .row .col-sm-3{
+        border-right: 0px solid black;
+    }
+}
