@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="880e9b44-3f17-4ec8-8854-2b41a24a46d3" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="ProjectId" id="1Yl02lHeuH84z6M9YydWuyTUryS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OSPanel\domains\Progect\views" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/index.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.index.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="880e9b44-3f17-4ec8-8854-2b41a24a46d3" name="Default Changelist" comment="" />
+      <created>1583501668115</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583501668115</updated>
+      <workItem from="1583501671314" duration="10085000" />
+      <workItem from="1584106036206" duration="1675000" />
+      <workItem from="1584107753351" duration="1793000" />
+      <workItem from="1584109563779" duration="1793000" />
+      <workItem from="1584111379292" duration="1799000" />
+      <workItem from="1584185122237" duration="1764000" />
+      <workItem from="1584186906960" duration="1207000" />
+      <workItem from="1584196248468" duration="1063000" />
+      <workItem from="1584198457411" duration="1794000" />
+      <workItem from="1584200266317" duration="1902000" />
+      <workItem from="1584268430149" duration="1774000" />
+      <workItem from="1584270220007" duration="1794000" />
+      <workItem from="1584272036122" duration="1636000" />
+      <workItem from="1584451549338" duration="1466000" />
+      <workItem from="1584454287803" duration="2347000" />
+      <workItem from="1584457211363" duration="223000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1219" y="223" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1584186556302">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1219" y="223" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584186556302" />
+    <state x="1159" y="207" key="#index.php" timestamp="1584186559559">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1159" y="207" key="#index.php/0.0.1920.1040@0.0.1920.1040" timestamp="1584186559559" />
+    <state x="1241" y="333" key="NewPhpClassDialog" timestamp="1584268698042">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1241" y="333" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584268698042" />
+    <state x="1275" y="442" key="NewPhpFileDialog" timestamp="1584271734780">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1275" y="442" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584271734780" />
+    <state x="1135" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1584454289564">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1135" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584454289564" />
+    <state x="1103" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1584199617900">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1103" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584199617900" />
+  </component>
+</project>

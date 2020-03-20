@@ -1,0 +1,89 @@
+/*background: #E0B0FF;*/
+.logo{
+    width: 55px;
+}
+
+a {
+    color: #3e4649;
+}
+
+p.float-md-right{
+    float: right;
+}
+#search{
+    background: #3e4649;
+
+}
+#films .col-sm-3 img{
+    width: inherit;
+    height: 300px;
+}
+.container .row .col-sm-3{
+    /*border-right: 1px solid black;*/
+}
+
+
+
+#films_conteiner{
+    background: #ebe8ec;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#films .row{
+    background: white;
+    height: fit-content;
+}
+#film{
+    border: 2px solid black;
+    height: 300px;
+    overflow: hidden;
+}
+
+#baner-1{
+    height: 300px;
+    background: url("/template/img/crop-clapperboard_23-2147698844.jpg");
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: 100% 100%;
+    width: 33%;
+    clip-path: polygon(0% 0%, 70% 0%, 100% 300px, 0% 300px);
+}
+
+#baner-2{
+
+    width: 67%;
+    height: 300px;
+    background: white;
+}
+
+a:hover{
+    color: white;
+}
+@media (max-width: 770px) {
+    .container .row .col-sm-3{
+        border-right: 0px solid black;
+    }
+    #baner-2 h2{
+        font-size: 1.8rem;
+    }
+    #baner-2 .row{
+        margin-right: 0%;
+    }
+    #baner-1 {
+        background-size: cover;
+    }
+}
+@media (max-width: 450px){
+    #baner-2 h2{
+        font-size: 1.5rem;
+    }
+    #films .row{
+        border: 0px solid white;
+    }
+}
+@media (min-width: 700px) {
+    #baner-2 .row {
+        padding-top: 40px;
+    }
+}
+
