@@ -10,6 +10,7 @@ li {
 }
 
 body {
+    min-height: 100%;
     background: black;
     background: url("/template/zast3.jpg") no-repeat ;
     background-size: 100% 100%;
