@@ -1,0 +1,201 @@
+/*background: #E0B0FF;*/
+.logo{
+    width: 55px;
+    height: 60px;
+}
+
+.row{
+    margin: 0px;
+}
+
+button, button:active, button:focus {
+    outline: none;
+}
+.account-menu-item{
+    border-bottom: 1px solid black;
+    width: 100%;
+    padding-left: 10px;
+    float: left;
+
+}
+.container-fluid{
+    padding: 0px;
+}
+a {
+    color: #6c757d;
+}
+
+li {
+    list-style-type: none; /* Убираем маркеры */
+}
+li:hover{
+    transition: 0.5s ;
+    background: #3e4649;
+}
+ul {
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+}
+p.float-md-right{
+    float: right;
+    color: #6c757d;
+}
+
+
+#search{
+    background: #3e4649;
+
+}
+#films .col-sm-3 img{
+    width: 100%;
+    height: 300px;
+}
+.container .row .col-sm-3{
+    /*border-right: 1px solid black;*/
+}
+
+
+
+#films_conteiner{
+    background: #ebe8ec;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#films .row{
+    background: white;
+    height: fit-content;
+}
+#film{
+    border: 2px solid black;
+    height: 300px;
+    overflow: hidden;
+}
+
+
+
+#baner-1{
+    height: 200px;
+    background: url("/template/img/crop-clapperboard_23-2147698844.jpg");
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: 100% 100%;
+    width: 33%;
+    clip-path: polygon(0% 0%, 70% 0%, 100% 300px, 0% 300px);
+}
+
+#baner-2{
+    width: 67%;
+    height: 200px;
+    background: white;
+}
+#baner-2 .row h2{
+    /*font-size: 0.75rem;*/
+    font-family: Arial;
+}
+#mobil{
+    display: none;
+}
+#mobil2{
+    display: none;
+}
+
+a:hover{
+    color: white;
+}
+
+
+
+p{
+    font-size: 1.3em;
+    margin: 2px;
+}
+
+h1{
+    font-size: 4em;
+}
+input{
+    font-size: 1.2em;
+}
+.form-control{
+    font-size: 1.3em;
+}
+.btn{
+    font-size: 1.3em;
+}
+button{
+    font-size: 1.2em;
+}
+#progres-item{
+    padding: 20px 0px;
+}
+@media (max-width: 767px) {
+    .container .row .col-sm-3{
+        border-right: 0px solid black;
+    }
+    /*#baner-2 h2{*/
+    /*    font-size: 1.8rem;*/
+    /*}*/
+    #baner-2 .row{
+        margin-right: 0%;
+        margin-top: 20px;
+    }
+    #baner-1 {
+        background-size: cover;
+    }
+    #mobil{
+        display: block;
+    }
+    #pc{
+        display: none;
+    }
+}
+@media (max-width: 575px) {
+    #pc2{
+        display: none;
+    }
+    #mobil2{
+        display: block;
+    }
+    #film{
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+    }
+    #progres-item{
+        padding: 10px 0px;
+    }
+}
+@media (max-width: 515px) {
+}
+@media (max-width: 450px){
+    #films .row{
+        border: 0px solid white;
+    }
+}
+@media (min-width: 0px) {
+    #baner-2 h2{
+        font-size: 1.2em;
+        margin-top: 10px;
+    }
+}
+@media (min-width: 346px) {
+    #baner-2 h2{
+        font-size: 1.3em;
+        margin-top: 10px;
+    }
+}
+@media (min-width: 768px) {
+    #baner-2 .row {
+        padding-top: 25px;
+    }
+    #baner-2 h2{
+        font-size: 1.6em;
+        margin-top: 7px;
+    }
+}
+@media (min-width: 992px) {
+    #baner-2 h2{
+        font-size: 2em;
+        margin: 5px;
+    }
+}
