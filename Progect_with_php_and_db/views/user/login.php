@@ -1,6 +1,15 @@
 <?php require_once ( ROOT . '/views/header_and_footer/header.php') ?>
 
+
+
 <h4 class="card-title mt-3 text-center"> Вход в аккаунт</h4>
+<?php if (isset($errors)&& is_array($errors)):?>
+<div class="text-center">
+    <ul>
+        <li>- <?echo $errors[0]?></li>
+    </ul>
+</div>
+<?endif;?>
 <div class="container">
     <div class="row">
         <div class="col-sm-6 offset-sm-3 mt-5">
@@ -18,7 +27,6 @@
         </div>
     </div>
 </div>
-
 
 
 

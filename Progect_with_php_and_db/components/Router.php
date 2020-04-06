@@ -31,13 +31,17 @@ class Router
     public function run()
     {
         $uri = $this->geturi();
+//        if(preg_match("/search\D\Dsearch=[_0-9A-Za-zА-Яа-пр-яЁё%]+/iu",$uri)) {
+//            echo "Пошел нахуй 2";
+//        }
 
         foreach ($this->routes as $uriPattern => $path) {
-            if(preg_match("~$uriPattern~", $uri)) {
+            if( preg_match("/$uriPattern/u", $uri) ) {
+
 //			    echo preg_match("~$uriPattern~", $uri);
 //			    echo '<br>Где ищем (запрос который набрал пользователь) : '.$uri;
-//               echo '<br> Что ищем (Совпадение из правила) : '.$uriPattern;
-//			    echo '<br>Кто обрабатывает: : '.$path;
+//                echo '<br> Что ищем (Совпадение из правила) : '.$uriPattern;
+//                echo '<br>Кто обрабатывает: : '.$path;
                 $internalRoute= preg_replace("~$uriPattern~",$path,$uri);
 
 
@@ -53,7 +57,7 @@ class Router
                 $actionName = 'action'.ucfirst((array_shift($segments)));
 //				echo '<br><br> controller name : '.$controllerName;
 //				echo ' <br><br> action name : '.$actionName;
-                $parameters=$segments;
+               $parameters=$segments;
                 //print_r($parameters);
 
                 $controllerFile = ROOT . '/controllers/' .$controllerName. '.php';
@@ -63,6 +67,7 @@ class Router
                 }
 
                 $controllerObject = new $controllerName;
+
                 $result = call_user_func_array(array($controllerObject,$actionName),$parameters);
 
                 if ($result != null) {

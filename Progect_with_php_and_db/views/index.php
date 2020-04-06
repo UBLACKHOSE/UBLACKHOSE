@@ -12,7 +12,7 @@
     <?php foreach ($films as $film):?>
     <div class="row" style=" border-radius: 4px; margin-top: 10px;" id="film">
         <div class="col-sm-3" style="padding: 0px" >
-            <img src="../template/img/img_films/<?echo $film['img']?>.jpg" class="img-thumbnail">
+            <a href="/film/<?echo $film['id']?>"><img src="../template/img/img_films/<?echo $film['img']?>.jpg" class="img-thumbnail"></a>
         </div>
         <div class="col-sm-3 text-center" style="padding-top: 10px;" id="mobil2">
             <h4><?echo $film['name']?></h4>
@@ -20,7 +20,7 @@
         <div class="col-sm-9" id="pc2">
             <div class="row">
                 <div class="col-sm-12">
-                    <h1><?echo $film['name']?></h1>
+                    <a href="/film/<?echo $film['id']?>"><h1><?echo $film['name']?></h1></a>
                 </div>
             </div>
             <div class="row" >

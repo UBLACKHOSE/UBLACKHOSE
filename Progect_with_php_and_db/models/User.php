@@ -1,6 +1,5 @@
 <?php
 
-require_once (ROOT.'/components/db.php');
 
 class User
 {
