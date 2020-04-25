@@ -4,7 +4,7 @@
 class Search
 {
     public static function searchFilms($search,$by = 'name',$spos='ASC'){
-        $db =Db::getConnection();
+        $db =db::getConnection();
         $result = $db->query("SELECT * FROM films WHERE name like'%".$search."%' ORDER BY ".$by.' '.$spos);
         // $result ->setFetchMode(PDO::FETCH_ASSOC);
         $filmList = array();

@@ -35,7 +35,7 @@
                         <p>Рекомендации</p>
                     </li>
                 </a>
-                <a href="/cabinet/">
+                <a href="/user/edit/">
                     <li class="account-menu-item">
                         <img src="/template/icons/gear.svg" style="float: left; height: 30px;width: 80%;margin-left: 10%;">
                         <p >Настройки профиля</p>
@@ -46,7 +46,7 @@
             <div class="col-md-10 col-xl-11" style="padding: 0px;">
                 <div class="row" style="padding: 0px;border-bottom: 1px solid black;">
                     <div class="col-6 col-sm-6 col-md-6 col-xl-4 text-center" style="padding: 0px;padding-top: 44px;text-align: center;">
-                        <img src="/template/img/img_user/<?php echo $_SESSION['userImg']?>.png" style="height: 140px; width: 140px; border-radius: 100%">
+                        <img src="/template/img/img_user/<?php echo $_SESSION['userImg']?>" style="height: 140px; width: 140px; border-radius: 100%">
                         <h3 style="text-align: center;margin: 0px"><?echo $_SESSION['userLogin']?></h3>
                     </div>
                     <div class="col-6 col-sm-6 col-md-6 col-xl-8" style="font-size: 1em;padding: 0px;">

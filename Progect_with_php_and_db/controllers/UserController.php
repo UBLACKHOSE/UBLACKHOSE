@@ -80,4 +80,49 @@ class UserController
         unset($_SESSION['user']);
         header("Location: /");
     }
+    public  function actionEdit(){
+        if (isset($_SESSION['user'])) {
+            $userID = User::checkLogged();
+            $user = User::getUserById($userID);
+            require_once(ROOT . '/views/user/edit.php');
+        }
+        else{
+            header('/login/');
+        }
+        return true;
+    }
+    public function actionEdit_img(){
+        header('Content-Type: application/json; charset=utf-8');
+        $response = array();
+        $response['status']='bad';
+
+        if(!empty($_FILES['file']['tmp_name'])){
+            for($key=0;$key<count($_FILES['file']['tmp_name']);$key++){
+                $upload_path = ROOT."/template/img/img_user/";
+                $user_filename = $_FILES['file']['name'][$key];
+                $userfile_basename = pathinfo($user_filename,PATHINFO_FILENAME);
+                $userfile_extension = pathinfo($user_filename,PATHINFO_EXTENSION);
+
+
+                $server_filename = $userfile_basename .".png";
+                $server_filepath = $upload_path. $server_filename;
+
+//               $i=0;
+//                while(file_exists($server_filepath)){
+//                    $i++;
+//                    $server_filepath = $upload_path.$userfile_basename."($i)".'.png';
+//                }
+                if(copy($_FILES['file']['tmp_name'][$key],$server_filepath)){
+                    User::updateImgUser($_SESSION['user'],$server_filename);
+                    $response['file'] = $server_filename;
+                    $response['status'] ='ok';
+                }
+            }
+            $response['text'] = 'file exist';
+        }
+
+
+        echo json_encode($response);
+        return true;
+    }
 }

@@ -21,7 +21,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../proverka" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PHP" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -168,6 +168,55 @@
       <workItem from="1585896288828" duration="1496000" />
       <workItem from="1586080374630" duration="1809000" />
       <workItem from="1586082201885" duration="1804000" />
+      <workItem from="1586185773128" duration="599000" />
+      <workItem from="1586233312521" duration="1370000" />
+      <workItem from="1586235145943" duration="1039000" />
+      <workItem from="1586236965651" duration="1424000" />
+      <workItem from="1586239719667" duration="2013000" />
+      <workItem from="1586856208732" duration="1859000" />
+      <workItem from="1586858082873" duration="1563000" />
+      <workItem from="1586863141590" duration="1409000" />
+      <workItem from="1586864949015" duration="1743000" />
+      <workItem from="1586936026184" duration="121000" />
+      <workItem from="1586936954418" duration="811000" />
+      <workItem from="1586937845816" duration="1282000" />
+      <workItem from="1586939659729" duration="1521000" />
+      <workItem from="1586941474468" duration="1659000" />
+      <workItem from="1586943313244" duration="1156000" />
+      <workItem from="1586945125371" duration="1619000" />
+      <workItem from="1586946933133" duration="1338000" />
+      <workItem from="1586948750212" duration="773000" />
+      <workItem from="1586950558916" duration="1494000" />
+      <workItem from="1586952383322" duration="599000" />
+      <workItem from="1586955708011" duration="1797000" />
+      <workItem from="1586957519920" duration="1793000" />
+      <workItem from="1586959332954" duration="1088000" />
+      <workItem from="1586961140263" duration="599000" />
+      <workItem from="1586962954198" duration="1242000" />
+      <workItem from="1587114022908" duration="599000" />
+      <workItem from="1587116134806" duration="599000" />
+      <workItem from="1587204949696" duration="112000" />
+      <workItem from="1587290440239" duration="1409000" />
+      <workItem from="1587291877949" duration="1795000" />
+      <workItem from="1587293692742" duration="1833000" />
+      <workItem from="1587295543149" duration="1792000" />
+      <workItem from="1587297360840" duration="1164000" />
+      <workItem from="1587317076703" duration="1703000" />
+      <workItem from="1587318794215" duration="1590000" />
+      <workItem from="1587320600772" duration="1794000" />
+      <workItem from="1587322413604" duration="1795000" />
+      <workItem from="1587324226110" duration="1805000" />
+      <workItem from="1587326048611" duration="295000" />
+      <workItem from="1587356058735" duration="1277000" />
+      <workItem from="1587360788524" duration="1716000" />
+      <workItem from="1587362520711" duration="1794000" />
+      <workItem from="1587364336911" duration="1794000" />
+      <workItem from="1587366146833" duration="1730000" />
+      <workItem from="1587379564618" duration="1102000" />
+      <workItem from="1587381373086" duration="1401000" />
+      <workItem from="1587394701734" duration="1784000" />
+      <workItem from="1587396500042" duration="1795000" />
+      <workItem from="1587398310417" duration="1641000" />
     </task>
     <servers />
   </component>
@@ -183,22 +232,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1159" y="207" key="#index.php/0.0.1920.1040@0.0.1920.1040" timestamp="1584186559559" />
-    <state x="1220" y="274" key="FileChooserDialogImpl" timestamp="1585825011959">
+    <state x="1220" y="274" key="FileChooserDialogImpl" timestamp="1587356204090">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1220" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585825011959" />
+    <state x="1220" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1587356204090" />
     <state x="1241" y="333" key="NewPhpClassDialog" timestamp="1585845002776">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1241" y="333" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585845002776" />
-    <state x="1275" y="442" key="NewPhpFileDialog" timestamp="1585842212118">
+    <state x="1275" y="442" key="NewPhpFileDialog" timestamp="1587295631058">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1275" y="442" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585842212118" />
-    <state x="1135" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1586082316082">
+    <state x="1275" y="442" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587295631058" />
+    <state x="1135" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1587398310280">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1135" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586082316082" />
+    <state x="1135" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587398310280" />
     <state x="1098" y="235" key="run.anything.popup" timestamp="1585854256536">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -95,12 +95,12 @@ class User
         return true;
     }
 
-    public static function getUserById($id){
-        if($id){
-            $db = Db::getConnection();
+    public static function getUserById($id_user){
+        if($id_user){
+            $db = db::getConnection();
             $sql = "SELECT * FROM users WHERE id = ?";
             $result = $db->prepare($sql);
-            $result ->bind_param("s",$id);
+            $result ->bind_param("s",$id_user);
             $result->execute();
             $result->bind_result($row,$row2,$row3,$row4,$row5);
             $result->fetch();
@@ -110,4 +110,13 @@ class User
         }
     }
 
+    public static function updateImgUser($id_user,$name_file){
+        $_SESSION['userImg']=$name_file;
+        $db = db::getConnection();
+        $sql = "UPDATE `users` SET `img`=? WHERE id=?";
+        $result = $db->prepare($sql);
+        $result->bind_param("ss",$name_file,$id_user);
+        $result->execute();
+        return true;
+    }
 }
