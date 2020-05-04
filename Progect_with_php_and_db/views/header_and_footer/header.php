@@ -48,6 +48,9 @@
                 </div>
                 <?endif;?>
            </div>
+
+
+
             <div id="myModal" class="modal fade" tabindex="-1">
                 <div class="modal-dialog modal-sm">
                     <div class="modal-content" style="height: 40px">
@@ -64,6 +67,10 @@
                     </div>
                 </div>
             </div>
+
+
+
+
             <div class="col-md-6" id="pc" style="float: right;padding: 15px;" >
                 <form class="col-md-12" style="height: 30px" method="get" action="/search/">
                     <div class="input-group" style="height: 30px">
@@ -76,6 +83,8 @@
                     </div>
                 </form>
             </div>
+
+
             <div class="col-md-3 " style=" margin-top: 0px;" id="pc">
             <?php if (User::isGuest()):?>
                 <p class="float-md-right" style="color: #3e4649; margin-top: 20px"><a href="/user/register/">Регистрация</a> / <a href="/user/login/">Вход</a></p>

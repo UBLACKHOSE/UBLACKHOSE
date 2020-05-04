@@ -68,8 +68,7 @@ class FilmController
                         </a>
                     </div>
                 </div>
-            </div>
-';
+            </div>';
         }
         return true;
     }

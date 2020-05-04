@@ -9,6 +9,7 @@ class CabinetController
             $user = User::getUserById($userID);
             $films1 = Film::getFilmListUser($_SESSION['user'], 1);
             $films2 = Film::getFilmListUser($_SESSION['user'], 2);
+            $admin = User::checkAdminRights($_SESSION['user']);
             require_once(ROOT . '/views/cabinet/index.php');
         }
         else{

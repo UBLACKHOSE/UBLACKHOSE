@@ -22,7 +22,7 @@ class User
         return false;
     }
     public static function checkEmailExists($email){
-        $db =Db::getConnection();
+        $db =db::getConnection();
 
         $sql = "SELECT COUNT(*) as count FROM users WHERE email =?";
         $result = $db->prepare($sql);
@@ -42,7 +42,7 @@ class User
         if ($password==$password_repeat){
             return true;
         }
-        false;
+        return false;
     }
 
     public static function register($login,$email,$password){
@@ -60,7 +60,7 @@ class User
         $result = $db->prepare($sql);
         $result->bind_param("ss",$email,$password);
         $result->execute();
-        $result->bind_result($row,$row2,$row3,$row4,$row5);
+        $result->bind_result($row,$row2,$row3,$row4,$row5,$row6);
         $result ->fetch();
 
         if($row5==null){
@@ -102,9 +102,9 @@ class User
             $result = $db->prepare($sql);
             $result ->bind_param("s",$id_user);
             $result->execute();
-            $result->bind_result($row,$row2,$row3,$row4,$row5);
+            $result->bind_result($row,$row2,$row3,$row4,$row5,$row6);
             $result->fetch();
-            $arr = array('id'=>$row,'name'=>$row2,'email'=>$row3,'password'=>$row4,'img' =>$row5);
+            $arr = array('id'=>$row,'name'=>$row2,'email'=>$row3,'password'=>$row4,'img' =>$row5,'admin_rights'=>$row6);
 
             return $arr;
         }
@@ -118,5 +118,60 @@ class User
         $result->bind_param("ss",$name_file,$id_user);
         $result->execute();
         return true;
+    }
+    public static function EditUserLogin($login,$id_user){
+
+        $db = db::getConnection();
+        $sql = "UPDATE `users` SET `login`=? WHERE `id`=?";
+        $result = $db->prepare($sql);
+        $result->bind_param("ss",$login,$id_user);
+        return   $result->execute();;
+    }
+
+    public static function EditUserEmail($email,$id_user){
+        $db = db::getConnection();
+        $sql = "UPDATE `users` SET `email`=? WHERE `id`=?";
+        $result = $db->prepare($sql);
+        $result->bind_param("ss",$email,$id_user);
+        return $result->execute();;
+
+    }
+
+    public static function checkPasswordUser($old_password,$id_user){
+        $db = db::getConnection();
+
+        $sql = "SELECT COUNT(*) as count FROM users WHERE password =? and id = ?";
+        $result = $db->prepare($sql);
+        $result->bind_param("ss",$old_password, $id_user);
+        $result->execute();
+        $result->bind_result($row);
+        $result->fetch();
+
+        if($row)
+        {
+            return true;
+        }
+        return false;
+    }
+    public static function EditUserPassword($password,$id_user){
+        $db = db::getConnection();
+        $sql = "UPDATE `users` SET `password`=? WHERE `id`=?";
+        $result = $db->prepare($sql);
+        $result->bind_param("ss",$password,$id_user);
+        return $result->execute();;
+    }
+
+
+    public static function checkAdminRights($id_user){
+
+        $db = db::getConnection();
+        $sql = "SELECT admin_rights FROM users WHERE id = ?";
+        $result = $db->prepare($sql);
+        $result ->bind_param("s",$id_user);
+        $result->execute();
+        $result->bind_result($row);
+        $result->fetch();
+        return $row;
+
     }
 }

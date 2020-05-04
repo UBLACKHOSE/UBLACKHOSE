@@ -41,6 +41,14 @@
                         <p >Настройки профиля</p>
                     </li>
                 </a>
+                <?if(isset($admin)&& $admin==1):?>
+                <a href="/admin/">
+                    <li class="account-menu-item">
+                        <img src="/template/icons/gear.svg" style="float: left; height: 30px;width: 80%;margin-left: 10%;">
+                        <p>Кабинет админа</p>
+                    </li>
+                </a>
+                <?endif;?>
             </ul>
         </div>
             <div class="col-md-10 col-xl-11" style="padding: 0px;">

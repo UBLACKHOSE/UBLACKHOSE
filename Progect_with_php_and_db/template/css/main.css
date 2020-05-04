@@ -230,6 +230,9 @@ button{
     background: #3c3c3c;
     color: white;
 }
+.custom-file-label::after{
+    display: none;
+}
 @media (max-width: 575px) {
     #pc2{
         display: none;

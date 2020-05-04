@@ -18,12 +18,6 @@ class Router
     {
         if (!empty($_SERVER['REQUEST_URI'])) {
 
-//            $trim = trim($trim, '/');$trim = substr($trim, strpos($trim, '/'));
-//            $trim = trim($trim, '/');
-//            $trim = substr($trim, strpos($trim, '/'));
-//            $trim = trim($trim, '/');
-//            $trim = substr($trim, strpos($trim, '/'));
-//            $trim = trim($trim, '/');
             return trim($_SERVER['REQUEST_URI'], '/');
         }
     }
@@ -31,21 +25,15 @@ class Router
     public function run()
     {
         $uri = $this->geturi();
-//        if(preg_match("/search\D\Dsearch=[_0-9A-Za-zА-Яа-пр-яЁё%]+/iu",$uri)) {
-//            echo "Пошел нахуй 2";
-//        }
+
 
         foreach ($this->routes as $uriPattern => $path) {
             if( preg_match("/$uriPattern/u", $uri) ) {
 
-//			    echo preg_match("~$uriPattern~", $uri);
-//			    echo '<br>Где ищем (запрос который набрал пользователь) : '.$uri;
-//                echo '<br> Что ищем (Совпадение из правила) : '.$uriPattern;
-//                echo '<br>Кто обрабатывает: : '.$path;
+
                 $internalRoute= preg_replace("~$uriPattern~",$path,$uri);
 
 
-//			    echo '<br><br>Нужно сформировать: '.$internalRoute;
 
 
                 $segments = explode('/', $internalRoute);
@@ -55,10 +43,9 @@ class Router
                 $controllerName = ucfirst($controllerName);
 
                 $actionName = 'action'.ucfirst((array_shift($segments)));
-//				echo '<br><br> controller name : '.$controllerName;
-//				echo ' <br><br> action name : '.$actionName;
+
                $parameters=$segments;
-                //print_r($parameters);
+
 
                 $controllerFile = ROOT . '/controllers/' .$controllerName. '.php';
 

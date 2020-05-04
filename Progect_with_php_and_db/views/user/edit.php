@@ -57,11 +57,62 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="offset-1 col-10" style="padding: 10px 0px">
+                    <div class="offset-1 col-10" style="padding: 10px 0px;">
                         <form id="myForm" method="post" enctype="multipart/form-data">
-                            <input name="myfile" id="myfile" type="file"  accept=".jpg, .jpeg, .png ">
-                            <input type="submit">
-                            <div id="my_form_satus"></div>
+                            <h2 style="padding: 10px 0px;">Сменить фото профиля:</h2>
+                            <div class="custom-file" style="width: 35%;float: left;">
+                                <input class="custom-file-input" style="float: left;" name="myfile" id="customFile" type="file"  accept=".jpg, .jpeg, .png ">
+                                <label  class="custom-file-label btn" style="text-align: center; background:#343a40;color: white" for="customFile">Выбрать файл</label>
+                            </div>
+                            <div style="width: 65%; float: left">
+                                <div id="namefile" class="col-10" style="width: 60%;float: left;overflow: hidden;">
+                                </div>
+                                <input style="width: 40%" class="btn btn-dark" type="submit" id="download" value="Сменить">
+                            </div>
+                            <div id="my_form_satus" style="font-size: 1.2em"></div>
+                        </form>
+                        <form action="#" method="post">
+                            <h2 style="padding: 10px 0px;">Сменить логин:</h2>
+                            <?if(isset($errors_login) && $errors_login!=null){?>
+                            <?foreach($errors_login as $error):?>
+                                    <div style="margin: 10px 0px; font-size: 1.2em;" class="alert-danger"><?echo $error ?></div>
+                            <?endforeach;}?>
+                            <div class="input-group">
+                                <input type="text" name="login_text" style="float: left;" class="form-control" placeholder="Введите логин">
+                                <input name="login" type="submit" class="btn btn-dark" value="Сменить">
+                            </div>
+                        </form>
+                        <form action="#" method="post">
+                            <h2 style="padding: 10px 0px;">Сменить Email:</h2>
+                            <?if(isset($errors_email) && $errors_email!=null){?>
+                                <?foreach($errors_email as $error):?>
+                                    <div style="margin: 10px 0px; font-size: 1.2em;" class="alert-danger"> <?echo $error ?></div>
+                                <?endforeach;}else if (isset($success_email) &&  $success_email!= null){?>
+                                <?foreach($success_email as $success):?>
+                                    <div style="margin: 10px 0px; font-size: 1.2em;" class="alert-success"> <?echo $success ?></div>
+                                <?endforeach;}?>
+                            <div class="input-group">
+                                <input type="email" name="email_text" style="float: left;" class="form-control" placeholder="Введите Email">
+                                <input name="email" type="submit" class="btn btn-dark"class="input-group-append" value="Сменить">
+                            </div>
+                        </form>
+                        <form action="#" method="post">
+                            <h2 style="padding: 10px 0px;">Сменить пароль:</h2>
+                            <?if(isset($errors_password) && $errors_password!=null){?>
+                                <?foreach($errors_password as $error):?>
+                                    <div style="margin: 10px 0px; font-size: 1.2em;" class="alert-danger"> <?echo $error ?></div>
+                                <?endforeach;}else if (isset($success_password) &&  $success_password!= null){?>
+                                <?foreach($success_password as $success):?>
+                                    <div style="margin: 10px 0px; font-size: 1.2em;" class="alert-danger"> <?echo $success ?></div>
+                                <?endforeach;}?>
+
+                            <div class="input-group">
+                                <h3 style="width: 100%">Старый пароль</h3>
+                                <input type="password" name="old_password" style="margin: 10px 0px;float: left;" class="form-control" placeholder="Введите старый пароль">
+                                <h3 style="width: 100%">Новый пароль</h3>
+                                <input  type="password" name="new_password" style="float: left; width: 100%;margin: 10px 0px;" placeholder="Введите новый пароль">
+                                <input  name="password" type="submit" class="btn btn-dark" value="Сменить" style="float: right">
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -69,15 +120,28 @@
         </div>
     </div>
 </div>
+
+
     <script>
         $(document).ready(
            function () {
                var form = $('#myForm');
                var message = $('#my_form_satus');
+               var avatar= $('#customFile');
+               document.getElementById('namefile').style.display = 'none';
+               avatar.change(function () {
+                   if(($("#customFile")[0].files).length!=0) {
+                       document.getElementById('namefile').innerHTML = avatar.val();
+                       document.getElementById('namefile').style.display = 'block';
+                   }
+                   else {
+                       document.getElementById('namefile').style.display = 'none';
+                   }
+               });
                form.on('submit',function () {
                    var formData= new FormData();
-                   if(($("#myfile")[0].files).length!=0){
-                       $.each($("#myfile")[0].files,function (i,file) {
+                   if(($("#customFile")[0].files).length!=0){
+                       $.each($("#customFile")[0].files,function (i,file) {
                            formData.append("file["+ i +"]",file);
                        });
                    }
@@ -101,7 +165,7 @@
                        success:function (data) {
                            if (data.status=='ok'){
                                message.text('Файл загружен');
-                               $('#myfile').val('');
+                               $('#customFile').val('');
                                console.log(data);
                                var img_user = document.getElementsByName('user_img');
                                for(var i=0;i<3;i++){

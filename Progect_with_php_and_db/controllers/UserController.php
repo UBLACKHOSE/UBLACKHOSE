@@ -6,6 +6,11 @@ require_once (ROOT.'/models/User.php');
 
 class UserController
 {
+
+
+
+
+
     public function actionLogin(){
         $email = '';
         $password = '';
@@ -40,6 +45,9 @@ class UserController
         require_once (ROOT.'/views/user/login.php');
         return true;
     }
+
+
+
 
     public function actionRegister(){
         $login = '';
@@ -76,14 +84,74 @@ class UserController
         require_once(ROOT . '/views/user/register.php');
         return true;
     }
+
+
+
+
+
     public function actionLogout(){
         unset($_SESSION['user']);
         header("Location: /");
     }
+
+
+
     public  function actionEdit(){
         if (isset($_SESSION['user'])) {
             $userID = User::checkLogged();
             $user = User::getUserById($userID);
+            if(isset($_POST['login_text'])&& $_POST['login_text']!='' && isset($_POST['login'])){
+
+                $login = $_POST['login_text'];
+                $errors_login = false;
+
+                if (!User::checkName($login)){
+                    $errors_login[] = "Логин не должен быть корочк 2х символов";
+                }
+                if ($errors_login== false){
+                    User::EditUserLogin($login,$_SESSION['user']);
+                    $_SESSION['userLogin'] = $login;
+                    header('location: /user/edit/');
+                }
+            }
+            if(isset($_POST['email_text'])&& $_POST['email_text']!='' && isset($_POST['email'])){
+
+                $email = $_POST['email_text'];
+                $errors_email = false;
+
+                if (!User::checkEmail($email)){
+                    $errors_email[] = "Логин не должен быть корочк 2х символов";
+                }
+                if(User::checkEmailExists($email)){
+                    $errors_email[] = 'Такой Email уже используется';
+                }
+                if ($errors_email== false){
+                    $success_email[] = 'Успешная смена Email';
+                    User::EditUserEmail($email,$_SESSION['user']);
+                    header('location: /user/edit/');
+                }
+            }
+            if(isset($_POST['password'])){
+                $old_password = $_POST['old_password'];
+                $new_password =  $_POST['new_password'];
+                $errors_password = false;
+                if(User::checkPasswordUser($old_password,$_SESSION['user'])){
+
+                if(!User::checkPassword($new_password)){
+                    $errors_password[] = 'Пароль не должен быть таким коротким';
+                }
+                    if ($errors_password== false){
+                        if (User::EditUserPassword($new_password,$_SESSION['user'])){
+                            $success_password[] = 'Успешная смена Пароля';
+                            header('location: /user/edit/');
+                        }
+                    }
+                }
+                else
+                    {
+                    $errors_password[] = 'Старый пароль не совпадает';
+                }
+            }
             require_once(ROOT . '/views/user/edit.php');
         }
         else{
@@ -91,6 +159,10 @@ class UserController
         }
         return true;
     }
+
+
+
+
     public function actionEdit_img(){
         header('Content-Type: application/json; charset=utf-8');
         $response = array();
@@ -125,4 +197,8 @@ class UserController
         echo json_encode($response);
         return true;
     }
+
+
+
+
 }

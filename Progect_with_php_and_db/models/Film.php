@@ -174,6 +174,8 @@ class Film
     }
 
 
+
+
     public static function getCommentsList($id_film){
         $db = db::getConnection();
 
@@ -192,6 +194,10 @@ class Film
         }
         return $commentList;
     }
+
+
+
+
     public static function getCountComments($id_film){
         $db = db::getConnection();
 
@@ -200,4 +206,15 @@ class Film
         $row = $result->fetch_assoc();
         return $row['count'];
     }
+
+    public static function getCountCommentsById($id_film,$id_user){
+        $db = db::getConnection();
+
+        $result = $db->query('SELECT COUNT(`id_comment`) as count FROM `user/comment` WHERE `id_film`='.$id_film.' id_user= '.$id_user);
+
+        $row = $result->fetch_assoc();
+        return $row['count'];
+    }
+
+
 }
