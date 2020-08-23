@@ -1,0 +1,109 @@
+body{
+    background: #f2f7fa;
+}
+.main{
+    min-height: 500px;
+    background: #fff;
+}
+.banner{
+    min-height: 500px;
+    background: url("../img/simislider_2.jpg") no-repeat ;
+    background-size: 100% 100%;
+}
+.fon-banner{
+    background: url("../img/simislider_1.png");
+    background-size: 100% 100%;
+}
+ul.navbar-nav.row{
+    width: 100%;
+    margin: 0px;
+}
+
+
+.menu-item{
+    width: 20%;
+    text-align: center;
+    /*border-right: 1px solid black;*/
+    /*border-left:1px solid black ;*/
+    font-weight: bold;
+    padding: 15px;
+    transition: 1s all ease;
+    cursor: pointer;
+    border-right: 1px solid #f79400;
+}
+
+
+nav.navbar.navbar-expand-lg.navbar-light {
+padding: 0px;
+}
+.logo{
+border-radius: 500px;
+}
+
+.banner .row{
+padding-top: 140px;
+}
+.company{
+height: 500px;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+}
+.info{
+display: flex;
+align-items: center;
+background: #f8f9fad9;
+padding: 10px;
+border-radius: 10px;
+}
+.zvonok{
+text-align: center;
+padding: 10px;
+/* right: 10px; */
+    background: #008640c7;
+    border-radius: 10px;
+    height: 216px;
+    width: 25%;
+}
+.zvonok button{
+    height: 70px;
+    background: #f79400;
+    color: aliceblue;
+    width: 100%;
+}
+.zvonok a{
+    font-size: 2em;
+    color: #fff;
+    width: 100%;
+}
+.zvonok p{
+    color: #fff;
+    font-size: 24px;
+}
+
+p{
+    margin: 0px;
+}
+
+.menu{
+    background:#f79400;
+}
+.menu-item a{
+    color: #FFFFFF;
+    transition: 1s all ease;
+}
+.menu-item:hover a{
+    color: #f79400;
+}
+
+
+.menu-item:hover{
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+.active,.menu-item.active a{
+    color: #f79400;
+    background: #FFFFFF ;
+}
+
