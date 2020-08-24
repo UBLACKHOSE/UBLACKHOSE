@@ -262,6 +262,16 @@ li a{
     background: #FFFFFF;
     color: #f79400;
 }
+
+.btn-my{
+    background: #f79400;
+    color: #FFFFFF;
+}
+
+.btn-cl{
+    background: #000;
+    color: #FFFFFF;
+}
 @media (max-width: 767px) {
     .banner {
         min-height: 0px;
@@ -302,6 +312,9 @@ li a{
     }
     .contacts input{
         margin-top: 40px;
+    }
+    .footer{
+        text-align: center;
     }
 }
 
