@@ -1,0 +1,321 @@
+body {
+    background: #f2f7fa;
+}
+
+.main {
+    min-height: 500px;
+    background: #fff;
+}
+
+.banner {
+    min-height: 500px;
+    background: url("../img/simislider_2.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.fon-banner {
+    background: url("../img/simislider_1.png");
+    background-size: 100% 100%;
+}
+
+ul.navbar-nav.row {
+    width: 100%;
+    margin: 10px 0px;
+}
+
+
+.menu-item {
+    width: 20%;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px;
+    transition: 1s all ease;
+    cursor: pointer;
+    border-right: 1px solid #f79400;
+}
+
+
+nav.navbar.navbar-expand-lg.navbar-light {
+    padding: 0px;
+}
+
+.logo {
+    border-radius: 500px;
+}
+
+.banner .row {
+    padding-top: 140px;
+}
+
+.company {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    background: #f8f9fad9;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.zvonok {
+    text-align: center;
+    padding: 32px;
+    background: #008640c7;
+    border-radius: 10px;
+    height: 216px;
+}
+
+.zvonok button {
+    height: 70px;
+    background: #f79400;
+    color: aliceblue;
+    width: 100%;
+    border: 1px solid #f79400;
+    transition: 1s ease all;
+    cursor: pointer;
+}
+
+.zvonok a {
+    font-size: 2em;
+    color: #fff;
+    width: 100%;
+}
+.zvonok a:hover{
+    color: #f79400;
+}
+.zvonok p {
+    color: #fff;
+    font-size: 24px;
+}
+
+p {
+    margin: 0px;
+}
+
+.menu {
+    background: #f79400;
+}
+
+.menu-item a {
+    color: #FFFFFF;
+    transition: 1s all ease;
+}
+
+.menu-item:hover a {
+    color: #f79400;
+}
+
+
+.menu-item:hover {
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+.active, .menu-item.active a {
+    color: #f79400;
+    background: #FFFFFF;
+}
+
+.txtcol {
+    color: #f79400;
+}
+
+.zag {
+    font-weight: 800;
+}
+
+.usluga {
+    display: flex;
+    margin-top: 10px;
+}
+
+.usluga:hover h3 {
+    color: #f79400;
+}
+
+.usluga:hover .uslugaIMG {
+    width: 70px;
+    /*margin: 30px;*/
+}
+
+.uslugaIMG {
+    width: 50px;
+    margin: 50px;
+    transition: 0.5s all ease;
+}
+
+.usluga h3 {
+    padding-top: 20px;
+    font-size: 1.75rem;
+}
+
+.line {
+    width: calc(100% - 400px);
+    background: #1b1e21;
+    height: 1px;
+    margin: 0px 200px;
+}
+.object img{
+    width: 300px;
+    height: 210px;
+    padding: 20px 20px;
+}
+.footer{
+    background: #f79400;
+    margin-top: 20px;
+}
+.footer .col-lg-4{
+    padding: 10px;
+}
+.footer p,a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.footer h6 {
+    font-weight: 600;
+}
+.footer span{
+    font-weight: 600
+}
+
+li a{
+    display: block;
+    width: 100%;
+}
+.object-map img{
+    width: 100%;
+    height: 250px;
+    padding: 20px 20px;
+}
+.object-map h4{
+    padding: 10px;
+    color: #f79400;
+    text-align: center;
+}
+.smotr{
+    background: #f79400;
+    padding: 10px;
+    margin: 10px 0px 24px 0px;
+}
+.contacts h4{
+    color: #f79400;
+    font-size: 24px;
+
+}
+
+.contacts a:hover{
+    color: #f79400;
+}
+
+.contacts .col-sm-4{
+  padding: 20px;
+}
+.contacts a{
+    color: black;
+}
+
+.contacts-item p{
+    color: #000;
+}
+
+.contacts-item{
+    margin-top: 10px;
+}
+.social-set{
+    display: flex;
+    margin-top: 20px;
+}
+
+.social-set div{
+    padding: 0px 10px;
+}
+
+.social-set img{
+    width: 40px;
+    height: 40px;
+}
+.zakaz-zvon{
+    padding: 20px;
+}
+.contacts input{
+    width: 100%;
+    background: #f79400;
+    margin-top: 20px;
+    color: #FFFFFF;
+    border: 1px solid #f79400;
+    cursor: pointer;
+    transition: 1s ease all;
+    height: 60px;
+}
+.contacts input:hover{
+    color: #f79400;
+    background: #FFFFFF;
+}
+
+
+.zvonok button:hover{
+    background: #FFFFFF;
+    color: #f79400;
+}
+@media (max-width: 767px) {
+    .banner {
+        min-height: 0px;
+    }
+
+    .banner .row {
+        padding: 10px 0px;
+
+    }
+
+    img.logo.col-sm-3 {
+        width: 100px;
+    }
+
+    h1.col-sm-9.text-center {
+        font-weight: 600;
+        font-size: 23px;
+    }
+
+    .usluga h3 {
+        padding-top: 20px;
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
+    .usluga {
+        display: block;
+        text-align: center;
+    }
+
+    .uslugaIMG {
+        width: 75px;
+        margin: 10px;
+    }
+    .line{
+        width: calc(100% - 80px);
+        margin: 0px 40px;
+    }
+    .contacts input{
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 991px) {
+    .menu-button {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .menu-item {
+        width: 100%;
+    }
+    .footer .col-lg-4{
+        padding-bottom: 10px;
+    }
+}
+
