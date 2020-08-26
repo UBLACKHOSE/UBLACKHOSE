@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../css/main_styles.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body onload="addimg()">
 <div class="main">
     <div class="header">
         <div class="container-fluid fon-banner">
@@ -76,13 +76,7 @@
             </div>
         </div>
 
-        <div class="row object">
-            <img src="../img/simislider_2.jpg" class="col-12 col-sm-6 col-lg-4">
-            <img src="../img/simislider_2.jpg" class="col-12 col-sm-6 col-lg-4">
-            <img src="../img/simislider_2.jpg" class="col-12 col-sm-6 col-lg-4">
-            <img src="../img/simislider_2.jpg" class="col-12 col-sm-6 col-lg-4">
-            <img src="../img/simislider_2.jpg" class="col-12 col-sm-6 col-lg-4">
-            <img src="../img/simislider_2.jpg" class="col-12 col-sm-6 col-lg-4">
+        <div class="row object" id="img">
         </div>
     </div>
 
@@ -123,6 +117,18 @@
         </div>
     </div>
 </div>
+<script>
+    function addimg() {
+        let count=30;
+        let str="";
+        for (var i = 1; i <= count; i++) {
+            str += "<img src='../img/dom/" + i + ".jpg' class=\"col-12 col-sm-6 col-lg-4\">";
+        }
+        str+="<img src='../img/dom/dom_1.jpg' class=\"col-12 col-sm-6 col-lg-4\">"
+        let blok_img = document.getElementById("img");
+        blok_img.innerHTML = str;
+    }
+</script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
