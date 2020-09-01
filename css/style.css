@@ -149,9 +149,27 @@ p {
     transition: 0.5s all ease;
 }
 
+.commentIMG {
+    height: 50px;
+}
+.comment h3{
+    color: #f79400;
+}
+.comment p{
+    color: #000;
+}
+
 .usluga h3 {
     padding-top: 60px;
     font-size: 1.75rem;
+}
+
+.usluga p {
+    transition: 0.5s all ease;
+}
+
+.usluga:hover p{
+    color: #000;
 }
 
 .line {
@@ -317,6 +335,7 @@ li a{
         text-align: center;
     }
 }
+
 
 @media (max-width: 991px) {
     .menu-button {
