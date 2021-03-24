@@ -4,8 +4,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <title>Покупка катализаторов в Севастополе</title>
+    <meta property="og:url" content="https://ublackhose.github.io">
+    <meta property="og:title" content="Покупка катализаторов в Севастополе">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/1.jpeg">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700|Oswald:400,700" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
@@ -82,11 +88,11 @@
               <div class="col-lg-6">
                 <h1>Скупка катализаторов в Крыму.</h1>
                 <p class="mb-5">Покупаем автомобильные катализаторы, сажевые фильтра, до 90000 р за киллограм. Выезд специалиста к вам бесплатный.</p>
-                <form action="#">
+                <form action="send.php" method="post">
                   <div class="form-group d-flex">
                     <div class="row">
                       <div class="col-12 col-sm-9">
-                    <input type="text" class="form-control" placeholder="Введите свой номер телефона">
+                        <input type="text"  name="tel" class="form-control" placeholder="Введите свой номер телефона" required>
                       </div>
                       <div class="col-12 col-sm-3">
                         <input type="submit" class="btn btn-primary text-white float-sm-none float-right m-1 m-sm-0" value="Записаться на удаление">
@@ -195,25 +201,25 @@
         </div>
         <div class="row">
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="100">
-            <form action="#" method="post">
+            <form action="send2.php" method="post">
               <div class="form-group row">
                 <div class="col-md-6 mb-4 mb-lg-0">
-                  <input type="text" class="form-control" placeholder="Имя">
+                  <input type="text" name="name" class="form-control" placeholder="Имя">
                 </div>
                 <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="Номер телефона">
+                  <input type="text" name="tel" class="form-control" placeholder="Номер телефона" required>
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="col-md-12">
-                  <input type="text" class="form-control" placeholder="Email">
+                  <input type="text" name="email" class="form-control" placeholder="Email">
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="col-md-12">
-                  <textarea name="" id="" class="form-control" placeholder="Коментарий" cols="30" rows="10"></textarea>
+                  <textarea name="com" id="" class="form-control" placeholder="Коментарий" cols="30" rows="10"></textarea>
                 </div>
               </div>
               <div class="form-group row">

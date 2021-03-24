@@ -1409,3 +1409,10 @@ img.img-fluid {
     max-width: 100%;
   }
 }
+
+@media (max-width: 1198px) {
+
+  .text-primary {
+    font-size: 0.8em;
+  }
+}
