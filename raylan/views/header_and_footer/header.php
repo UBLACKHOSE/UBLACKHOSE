@@ -47,7 +47,7 @@
                         <a class="<?if ($act==6){?>active_us<?}?>" href="/user/register">Регистрация</a>
                         <a class="<?if ($act==7){?>active_us<?}?>" href="/user/login">Вход</a>
                     <?php else:?>
-                        <a class="<?if ($act==8){?>active_us<?}?>" href="/user/id=<?echo $_SESSION['user'];?>"><?echo $_SESSION['userLogin'];?></a>/<a href="/user/logout/">Выйти</a>
+                        <a class="<?if ($act==8){?>active_us<?}?>" href="/user"><?echo $_SESSION['userLogin'];?></a>/<a href="/user/logout/">Выйти</a>
                     <?php endif;?>
 
                 </div>

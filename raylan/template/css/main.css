@@ -195,6 +195,21 @@ ol {
     max-width: none;
 }
 
+.btn-dark:hover{
+    background: #1e7e34;
+    border-color: #145122;
+}
+.btn-dark:not(:disabled):not(.disabled):active{
+    background: #1e7e34;
+    border-color: #145122;
+}
+.btn-dark.focus, .btn-dark:focus{
+    background: #1e7e34;
+    border-color: #145122;
+}
+.custom-file-label::after{
+    content: "Загрузить";
+}
 @media (min-width: 1200px) {
     .modal.fade .modal-dialog.container {
         max-width: 1140px;

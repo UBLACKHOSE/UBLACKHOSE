@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 19 2021 г., 07:43
--- Версия сервера: 10.3.13-MariaDB-log
--- Версия PHP: 7.1.32
+-- Время создания: Апр 21 2021 г., 12:31
+-- Версия сервера: 8.0.19
+-- Версия PHP: 7.1.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,30 +24,76 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `hous`
+--
+
+CREATE TABLE `hous` (
+  `id` int NOT NULL,
+  `house` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `hous`
+--
+
+INSERT INTO `hous` (`id`, `house`) VALUES
+(1, '1'),
+(2, '2'),
+(3, '3'),
+(4, '4'),
+(5, '5'),
+(6, '6'),
+(7, '7');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `house/hous`
+--
+
+CREATE TABLE `house/hous` (
+  `id` int NOT NULL,
+  `id_hous` int NOT NULL,
+  `id_street` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `house/hous`
+--
+
+INSERT INTO `house/hous` (`id`, `id_hous`, `id_street`) VALUES
+(1, 1, 1),
+(3, 2, 1),
+(2, 5, 2);
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `invoices`
 --
 
 CREATE TABLE `invoices` (
-  `id` int(12) NOT NULL,
-  `id_user` int(12) NOT NULL,
+  `id` int NOT NULL,
+  `id_street` int NOT NULL,
   `price` float NOT NULL,
-  `number` int(12) NOT NULL,
+  `number` int NOT NULL,
   `date_start` date NOT NULL,
   `date_stop` date NOT NULL,
-  `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `base` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `reason` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `category` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `base` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `reason` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `category` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` int NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `invoices`
 --
 
-INSERT INTO `invoices` (`id`, `id_user`, `price`, `number`, `date_start`, `date_stop`, `type`, `base`, `reason`, `name`, `category`) VALUES
-(1, 1, 424.23, 12321421, '2020-09-07', '2021-09-10', 'Взнос', 'Лицевой счет', 'Решение Общего собрания садоводов - членов СНТ от 25.01.2014', 'Членский взнос 2014г. 5000 руб. за участок', 'Нет'),
-(2, 1, 424.23, 12321421, '2020-09-07', '2021-09-10', 'Взнос', 'Лицевой счет', 'Решение Общего собрания садоводов - членов СНТ от 25.01.2014', 'Членский взнос 2014г. 5000 руб. за участок', 'Нет');
+INSERT INTO `invoices` (`id`, `id_street`, `price`, `number`, `date_start`, `date_stop`, `type`, `base`, `reason`, `name`, `category`, `status`) VALUES
+(1, 1, 424.23, 12321421, '2020-09-07', '2021-09-10', 'Взнос', 'Лицевой счет', 'Решение Общего собрания садоводов - членов СНТ от 25.01.2014', 'Членский взнос 2014г. 5000 руб. за участок', 'Нет', 0),
+(2, 1, 424.23, 12321421, '2020-09-07', '2021-09-10', 'Взнос', 'Лицевой счет', 'Решение Общего собрания садоводов - членов СНТ от 25.01.2014', 'Членский взнос 2014г. 5000 руб. за участок', 'Нет', 1);
 
 -- --------------------------------------------------------
 
@@ -57,12 +102,12 @@ INSERT INTO `invoices` (`id`, `id_user`, `price`, `number`, `date_start`, `date_
 --
 
 CREATE TABLE `news` (
-  `id` int(12) NOT NULL,
-  `title` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` int NOT NULL,
+  `title` varchar(1024) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `date` date NOT NULL,
-  `avtor` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `img` varchar(12) COLLATE utf8mb4_unicode_ci NOT NULL
+  `avtor` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `img` varchar(12) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -78,15 +123,34 @@ INSERT INTO `news` (`id`, `title`, `description`, `date`, `avtor`, `img`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `street`
+--
+
+CREATE TABLE `street` (
+  `id` int NOT NULL,
+  `street` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `street`
+--
+
+INSERT INTO `street` (`id`, `street`) VALUES
+(1, 'Ломаносова'),
+(2, 'Калинина');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `user/comment`
 --
 
 CREATE TABLE `user/comment` (
-  `id_news` int(11) NOT NULL,
-  `id_user` int(11) NOT NULL,
-  `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_news` int NOT NULL,
+  `id_user` int NOT NULL,
+  `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `date_and_time` datetime NOT NULL,
-  `id_comment` int(11) NOT NULL
+  `id_comment` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -104,36 +168,58 @@ INSERT INTO `user/comment` (`id_news`, `id_user`, `content`, `date_and_time`, `i
 --
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `login` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `img` varchar(12) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0.png',
-  `balance` float NOT NULL
+  `id` int NOT NULL,
+  `login` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `img` varchar(12) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0.png',
+  `balance` float NOT NULL DEFAULT '0',
+  `street_id` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id`, `login`, `email`, `password`, `img`, `balance`) VALUES
-(1, 'UBLACKHOSE', 'veselovdima394@gmail.com', 'GogaMoga29', '0.png', 0);
+INSERT INTO `users` (`id`, `login`, `email`, `password`, `img`, `balance`, `street_id`) VALUES
+(1, 'UBLACKHOSE', 'veselovdima394@gmail.com', 'GogaMoga29', 'img_6.png', 600.62, 1),
+(4, 'User2', 'User2@mail.ru', 'password', '0.png', 0, 2);
 
 --
 -- Индексы сохранённых таблиц
 --
 
 --
+-- Индексы таблицы `hous`
+--
+ALTER TABLE `hous`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `house/hous`
+--
+ALTER TABLE `house/hous`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_hous` (`id_hous`,`id_street`),
+  ADD KEY `id_house` (`id_street`);
+
+--
 -- Индексы таблицы `invoices`
 --
 ALTER TABLE `invoices`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_user` (`id_user`);
+  ADD KEY `id_user` (`id_street`);
 
 --
 -- Индексы таблицы `news`
 --
 ALTER TABLE `news`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `street`
+--
+ALTER TABLE `street`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -148,45 +234,71 @@ ALTER TABLE `user/comment`
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `street_id` (`street_id`);
 
 --
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
 --
+-- AUTO_INCREMENT для таблицы `hous`
+--
+ALTER TABLE `hous`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT для таблицы `house/hous`
+--
+ALTER TABLE `house/hous`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT для таблицы `invoices`
 --
 ALTER TABLE `invoices`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблицы `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT для таблицы `street`
+--
+ALTER TABLE `street`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблицы `user/comment`
 --
 ALTER TABLE `user/comment`
-  MODIFY `id_comment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_comment` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
 --
 
 --
+-- Ограничения внешнего ключа таблицы `house/hous`
+--
+ALTER TABLE `house/hous`
+  ADD CONSTRAINT `house/hous_ibfk_1` FOREIGN KEY (`id_street`) REFERENCES `street` (`id`),
+  ADD CONSTRAINT `house/hous_ibfk_2` FOREIGN KEY (`id_hous`) REFERENCES `hous` (`id`);
+
+--
 -- Ограничения внешнего ключа таблицы `invoices`
 --
 ALTER TABLE `invoices`
-  ADD CONSTRAINT `invoices_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `invoices_ibfk_1` FOREIGN KEY (`id_street`) REFERENCES `house/hous` (`id`);
 
 --
 -- Ограничения внешнего ключа таблицы `user/comment`
@@ -194,6 +306,12 @@ ALTER TABLE `invoices`
 ALTER TABLE `user/comment`
   ADD CONSTRAINT `user/comment_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`),
   ADD CONSTRAINT `user/comment_ibfk_2` FOREIGN KEY (`id_news`) REFERENCES `news` (`id`);
+
+--
+-- Ограничения внешнего ключа таблицы `users`
+--
+ALTER TABLE `users`
+  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`street_id`) REFERENCES `house/hous` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
