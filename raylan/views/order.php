@@ -64,14 +64,14 @@
                          alt="">
                     <h6><a class="mt-15 plr-20 dplay-block" type="submit"><b>Баланс:<?=$balance?>р</b></a></h6>
                     <div class="form-sm max-w-400x mlr-auto">
-                        <h6><a class="mt-15 plr-20 btn-b-sm btn-fill-primary dplay-block" type="submit"><b>Изменить
+                        <h6><a href="/user/edit" class="mt-15 plr-20 btn-b-sm btn-fill-primary dplay-block" type="submit"><b>Изменить
                                     профиль</b></a></h6>
                     </div>
                     <div class="form-sm max-w-400x mlr-auto">
                         <h6><a class="mt-15 plr-20 btn-b-sm btn-fill-primary dplay-block" href="/user/up_balance" type="submit"><b>Пополнить баланс</b></a></h6>
                     </div>
                     <div class="form-sm max-w-400x mlr-auto">
-                        <h6><a class="mt-15 plr-20 btn-b-sm btn-fill-primary dplay-block" type="submit"><b>История платежей</b></a></h6>
+                        <h6><a href="/user/history" class="mt-15 plr-20 btn-b-sm btn-fill-primary dplay-block" type="submit"><b>История платежей</b></a></h6>
                     </div>
                     <div class="ptb-0">
                         <h4 class="mtb-20"><b>Ваш адрес:</b><?if($street != null){?> <?=$street['street'] ?> улица, <?=$street['house'] ?> дом<?}else{echo '                    

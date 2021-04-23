@@ -69,7 +69,7 @@ class User
         $result = $db->prepare($sql);
         $result->bind_param("ss",$email,$password);
         $result->execute();
-        $result->bind_result($row,$row2,$row3,$row4,$row5,$row6,$row7);
+        $result->bind_result($row,$row2,$row3,$row4,$row5,$row6,$row7,$row8);
         $result ->fetch();
 
         if($row)
@@ -89,14 +89,7 @@ class User
         $_SESSION['userImg'] = $userImg;
     }
 
-    public static function checkLogged(){
 
-        if (isset($_SESSION['user'])){
-            return $_SESSION['user'];
-        }
-
-        header("Location:/user/login");
-    }
 
 
     public static function isGuest(){
@@ -106,6 +99,26 @@ class User
         return true;
     }
 
+
+    public static function isAdmin(){
+        if(isset($_SESSION['user'])) {
+            $db = db::getConnection();
+            $sql = "SELECT `status` FROM `users` WHERE id = ? ";
+            $result = $db->prepare($sql);
+            $result->bind_param("s", $_SESSION['user']);
+            $result->execute();
+            $result->bind_result($status);
+            $result->fetch();
+            if($status>0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }else {
+            return false;
+        }
+    }
 
     public static function getUserById($id_user){
         if($id_user){
@@ -179,7 +192,7 @@ class User
             $result = $db->prepare($sql);
             $result ->bind_param("s",$id_user);
             $result->execute();
-            $result->bind_result($row,$row2,$row3,$row4,$row5,$row6,$row7);
+            $result->bind_result($row,$row2,$row3,$row4,$row5,$row6,$row7,$row8);
             $result->fetch();
             return $row6;
         }
@@ -366,4 +379,13 @@ class User
         $result->execute();
         $_SESSION['userImg'] =$img;
     }
+
+    public static function getHouse($id_street,$id_house){
+
+        $db = db::getConnection();
+        $result = $db->query("SELECT id FROM `house/hous` WHERE id_hous=".$id_house." AND id_street = ".$id_street);
+        $row = $result->fetch_assoc();
+        return $row['id'];
+    }
+
 }

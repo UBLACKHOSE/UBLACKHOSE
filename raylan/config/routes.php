@@ -4,6 +4,8 @@ return array(
 
     'user\/order\/price_id-([0-9]+)'=>'user/order/$1',
     'form1'=>'form/form1',
+    'admin\/ch'=>'admin/ch',
+    'admin\/new'=>'admin/new',
     'user\/up_balance'=>'user/up_balance',
     'user\/register' => 'user/register',
     'user\/login' => 'user/login',

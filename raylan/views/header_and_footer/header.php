@@ -21,6 +21,22 @@
 </head>
 <body>
 <header class="header-section">
+    <?if(User::isAdmin()){?>
+        <div class="container-fluid menu_admin">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-sm max-w-400x mlr-auto">
+                        <h6><a href="/admin/ch" class="plr-20 btn-b-sm btn-fill-primary dplay-block" type="submit"><b>Выставление счетов</b></a></h6>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-sm max-w-400x mlr-auto">
+                        <h6><a href="/admin/new" class="plr-20 btn-b-sm btn-fill-primary dplay-block" type="submit"><b>Добавить новость</b></a></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?}?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-8 offset-sm-2">

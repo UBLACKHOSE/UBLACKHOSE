@@ -210,6 +210,11 @@ ol {
 .custom-file-label::after{
     content: "Загрузить";
 }
+
+.menu_admin{
+    padding: 10px;
+    margin-bottom: 10px;
+}
 @media (min-width: 1200px) {
     .modal.fade .modal-dialog.container {
         max-width: 1140px;
