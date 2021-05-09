@@ -57,4 +57,15 @@
             </div><!-- row -->
         </div><!-- container -->
     </section>
+
+
+
+<section class="pt-0 pb-20">
+    <div class="container ">
+    <iframe style="padding: 10px; width: 100%;height: 500px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d320.694913793351!2d73.25661801051595!3d49.98212251697724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDU4JzU1LjUiTiA3M8KwMTUnMjcuNCJF!5e0!3m2!1sru!2sru!4v1620567387942!5m2!1sru!2sru"   allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+
+
+
 <?php require_once (ROOT.'/views/header_and_footer/footer.php')?>

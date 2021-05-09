@@ -47,16 +47,12 @@
             </a>
         </div>
         <ul class="main-menu d-none d-lg-block">
-            <li class="<?if ($act==1){?>active<?}?>"><a href="/">Домой</a></li>
+            <li class="<?if ($act==1){?>active<?}?>"><a href="/">Главная</a></li>
             <li class="<?if ($act==2){?>active<?}?>"><a href="/about">О нашем снт</a></li>
             <li class="<?if ($act==3){?>active<?}?>"><a href="/news">Новости</a></li>
-            <li class="<?if ($act==4){?>active<?}?>"><a href="/">Услуги</a></li>
             <li class="<?if ($act==5){?>active<?}?>"><a href="/contacts">Контакты</a></li>
         </ul>
             </div>
-            <style>
-
-            </style>
             <div class="col-sm-2 main-menu d-none d-lg-block">
                 <div class="float-right">
                     <?php if (User::isGuest()):?>
@@ -72,13 +68,3 @@
     </div>
 
 </header>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 col-lg-12">
-            <form class="abs-form mtb-10">
-                <input type="text" placeholder="Search">
-                <button type="submit"><i class="ion-ios-search"></i></button>
-            </form>
-        </div>
-    </div>
-</div>

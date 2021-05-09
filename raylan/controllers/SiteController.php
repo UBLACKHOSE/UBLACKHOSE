@@ -1,14 +1,11 @@
 <?php
 
-require_once(ROOT . '/models/News.php');
-
 class SiteController
 {
     public function actionIndex(){
         $news = array();
-        $news =News::getNewsListInMainPage();
-        $act =1;
-        //print_r($news);
+        $news = News::getNewsListInMainPage();
+        $act = 1;
         require_once(ROOT.'/views/index.php');
         return true;
     }

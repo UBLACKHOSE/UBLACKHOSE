@@ -5,8 +5,6 @@
 
             <div class="order-1 order-lg-0 col-md-12 col-lg-8">
 
-
-
                 <div class="ptb-0">
                     <h2 class="mtb-20"><b>Ваши счета</b></h2>
                 </div>

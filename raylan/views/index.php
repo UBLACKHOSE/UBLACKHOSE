@@ -1,15 +1,29 @@
 <?php require_once ( ROOT . '/views/header_and_footer/header.php') ?>
 
+<style>
+    .img-primary{
+        background:url('/template/img/index-slide.jpg') no-repeat center ;
+        background-size: cover;
+    }
+</style>
 
-<section class="pt-0 bg-primary">
-
+<section class="pt-0 pb-0 img-primary">
+    <div class="container">
+    <div class="row" style="padding-top: 250px;padding-bottom: 250px">
+        <div class="col-12">
+            <h1 class="text-center color-white"><strong>Знакомьтесь, </strong></h1>
+            <h1 class="text-center color-white"><strong>«СНТ"Кок-Тобе"»</strong></h1>
+        </div>
+    </div>
+    </div>
+</section>
+<section class="pt-50 pb-50 bg-primary">
     <div class="plr-50 oflow-hidden">
         <div class="p-3">
             <a class="plr-10 mtb-10 btn-b-md" style="font-size: 5em;" href="/">Новости</a>
         </div>
     </div>
     <div class="plr-50 h-600x h-md-800x h-xs-1000x oflow-hidden">
-
         <div class="w-60 w-md-100 float-left float-md-none h-100 h-md-40 h-xs-50">
 
             <div class="w-50 w-xs-100 float-left float-xs-none pos-relative h-100 h-xs-50">
@@ -82,7 +96,7 @@
 </section>
 
 <section class="ptb-30">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
 
             <div class="col-md-12 col-lg-12">
@@ -103,10 +117,10 @@
                     <div class="row mtb-20">
                         <div class="col-sm-6 col-md-7">
                             <p class="mtb-2"><strong>Год основания:</strong> 1967 г.</p>
-                            <p><strong>Территория СНТ:</strong> Согласно Постановлению о закреплении земель за СНТ «Виноградово» от 1992 г.  Общая площадь: 20,02 га; общие земли – 5,91 га; в частной собственности – 14,11 га.
+                            <p><strong>Территория СНТ:</strong> Согласно Постановлению о закреплении земель за СНТ «Дружба» от 1992 г.  Общая площадь: 20,02 га; общие земли – 5,91 га; в частной собственности – 14,11 га.
                             </p>
                             <p><strong>На территории СНТ:</strong> адм. здание (сторожка и правление), адм. строение (выездной магазин, работает  с мая по октябрь), водокачка, трансформатор, пожарный пруд, детская площадка.
-                                Кадастровый номер СНТ «Виноградово»: 50:29:0020418
+                                Кадастровый номер СНТ «Дружба»: 50:29:0020418
                             </p>
                             <p> <strong>Подъезд:</strong> круглогодичный, автобусная остановка (рейсовый автобус подается с мая по октябрь)
                             </p>
