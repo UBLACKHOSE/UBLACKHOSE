@@ -98,7 +98,7 @@ class UserController
         }else {
             $InvoicesList = array();
             $InvoicesList = User::getUserListInvoicesById($id_house_street);
-            if($InvoicesList==null){
+            if($InvoicesList == null){
                 $errors2 = "У вас пока нету не оплаченных счетов";
             }
         }
@@ -146,6 +146,7 @@ class UserController
 
     public function actionUp_balance(){
         if(!User::isGuest()) {
+            $balance = User::getPrice($_SESSION['user']);
             $street = User::getUserStreet($_SESSION['user']);
             if ($street == null) {
                 $errors = "Вы не указали улицу и дом в вашем профиле, нажмите на изменить профиль для указания";
@@ -169,12 +170,20 @@ class UserController
         require_once (ROOT.'/views/up_balance.php');
         return true;
     }
+
+
     public function actionHistory(){
         if(!User::isGuest()) {
-            $street = User::getUserStreet($_SESSION['user']);
+
+            $id_house_street = User::getUserStreetId($_SESSION['user']);
+            $street = User::getUserStreet($id_house_street);
+            $balance = User::getPrice($_SESSION['user']);
+            print_r( $street);
             if ($street == null) {
                 $errors = "Вы не указали улицу и дом в вашем профиле, нажмите на изменить профиль для указания";
-            }else{
+            }
+            else
+            {
                 $balance = User::getPrice($_SESSION['user']);
                 $InvoicesList = User::getUserListInvoicesById2(User::getUserStreetId($_SESSION['user']));
                 if($InvoicesList==null){

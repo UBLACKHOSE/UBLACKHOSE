@@ -54,7 +54,7 @@
                         <div class="ptb-0">
                             <h4 class="mtb-20"><b>Ваш адрес:</b><?if($street != null){?><?=$street['house'] ?> улица, <?=$street['street'] ?> дом<?}else{echo '                    
                         <div class="form-sm max-w-400x mlr-auto">
-                        <h6><a class="mt-15 plr-20 btn-b-sm btn-fill-primary dplay-block" type="submit"><b>Указать</b></a></h6>
+                        <h6><a href="/user/edit" class="mt-15 plr-20 btn-b-sm btn-fill-primary dplay-block" type="submit"><b>Указать</b></a></h6>
                     </div>';}?></h4>
                         </div>
                     </div>

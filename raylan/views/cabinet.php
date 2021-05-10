@@ -9,7 +9,8 @@
                     <h2 class="mtb-20"><b>Ваши счета</b></h2>
                 </div>
                 <h2 class="mtb-20"><?if(isset($errors2)){echo $errors2;}?></h2>
-                <? foreach ($InvoicesList as $item) { ?>
+                <h2 class="mtb-20"><?if(isset($errors)){echo $errors;}?></h2>
+                <? if(isset($errors) && isset($errors2)){ foreach ($InvoicesList as $item) { ?>
                     <div>
                         <div class="row">
                             <div class="col-sm-7">
@@ -39,7 +40,7 @@
                         </div>
                         <div class="mb-20 brdr-grey-1 opacty-6"></div>
                     </div>
-                <? } ?>
+                <? }}?>
             </div><!-- col-sm-8 -->
 
             <div class="order-0  order-lg-1 col-md-12 col-lg-4">
@@ -62,7 +63,7 @@
                     <div class="ptb-0">
                         <h4 class="mtb-20"><b>Ваш адрес:</b><?if($street != null){?> <?=$street['street'] ?> улица, <?=$street['house'] ?> дом<?}else{echo '                    
                         <div class="form-sm max-w-400x mlr-auto">
-                        <h6><a class="mt-15 plr-20 btn-b-sm btn-fill-primary dplay-block" type="submit"><b>Указать</b></a></h6>
+                        <h6><a href="/user/edit" class="mt-15 plr-20 btn-b-sm btn-fill-primary dplay-block" type="submit"><b>Указать</b></a></h6>
                     </div>';}?></h4>
                     </div>
                 </div>
